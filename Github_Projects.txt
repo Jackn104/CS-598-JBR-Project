@@ -2,3 +2,10 @@ Jackson Found to Verify
   https://github.com/dbeaver/dbeaver
   https://github.com/AntennaPod/AntennaPod
   https://github.com/Anuken/Mindustry
+  
+Vivek: 
+  https://github.com/google/guava
+  https://github.com/apache/dubbo/actions
+  https://github.com/apache/iceberg
+  https://github.com/apache/maven/actions
+  
