@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CS-598-JBR-Project.iml" filepath="$PROJECT_DIR$/.idea/CS-598-JBR-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/common/auto-common.iml" filepath="$PROJECT_DIR$/auto/common/auto-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/factory/auto-factory.iml" filepath="$PROJECT_DIR$/auto/factory/auto-factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/service/processor/auto-service.iml" filepath="$PROJECT_DIR$/auto/service/processor/auto-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/service/auto-service-aggregator.iml" filepath="$PROJECT_DIR$/auto/service/auto-service-aggregator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/service/annotations/auto-service-annotations.iml" filepath="$PROJECT_DIR$/auto/service/annotations/auto-service-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/value/processor/auto-value.iml" filepath="$PROJECT_DIR$/auto/value/processor/auto-value.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/value/annotations/auto-value-annotations.iml" filepath="$PROJECT_DIR$/auto/value/annotations/auto-value-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/value/auto-value-parent.iml" filepath="$PROJECT_DIR$/auto/value/auto-value-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-examples/commons-math-examples.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-examples/commons-math-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-parent.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-core/commons-math4-core.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-core/commons-math4-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-legacy/commons-math4-legacy.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-legacy/commons-math4-legacy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-legacy-core/commons-math4-legacy-core.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-legacy-core/commons-math4-legacy-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-legacy-exception/commons-math4-legacy-exception.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-legacy-exception/commons-math4-legacy-exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-neuralnet/commons-math4-neuralnet.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-neuralnet/commons-math4-neuralnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-transform/commons-math4-transform.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-transform/commons-math4-transform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-examples/examples-kmeans/examples-kmeans.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-examples/examples-kmeans/examples-kmeans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-examples/examples-kmeans/image/examples-kmeans-image.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-examples/examples-kmeans/image/examples-kmeans-image.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-examples/examples-sofm/examples-sofm.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-examples/examples-sofm/examples-sofm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-examples/examples-sofm/chinese-rings/examples-sofm-chinese-rings.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-examples/examples-sofm/chinese-rings/examples-sofm-chinese-rings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-math/commons-math-examples/examples-sofm/tsp/examples-sofm-tsp.iml" filepath="$PROJECT_DIR$/commons-math/commons-math-examples/examples-sofm/tsp/examples-sofm-tsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/extensions-parent.iml" filepath="$PROJECT_DIR$/guice/extensions/extensions-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/value/src/it/functional/functional.iml" filepath="$PROJECT_DIR$/auto/value/src/it/functional/functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/core/guice.iml" filepath="$PROJECT_DIR$/guice/core/guice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/assistedinject/guice-assistedinject.iml" filepath="$PROJECT_DIR$/guice/extensions/assistedinject/guice-assistedinject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/bom/guice-bom.iml" filepath="$PROJECT_DIR$/guice/bom/guice-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/dagger-adapter/guice-dagger-adapter.iml" filepath="$PROJECT_DIR$/guice/extensions/dagger-adapter/guice-dagger-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/grapher/guice-grapher.iml" filepath="$PROJECT_DIR$/guice/extensions/grapher/guice-grapher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/jmx/guice-jmx.iml" filepath="$PROJECT_DIR$/guice/extensions/jmx/guice-jmx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/jndi/guice-jndi.iml" filepath="$PROJECT_DIR$/guice/extensions/jndi/guice-jndi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/guice-parent.iml" filepath="$PROJECT_DIR$/guice/guice-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/persist/guice-persist.iml" filepath="$PROJECT_DIR$/guice/extensions/persist/guice-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/servlet/guice-servlet.iml" filepath="$PROJECT_DIR$/guice/extensions/servlet/guice-servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/spring/guice-spring.iml" filepath="$PROJECT_DIR$/guice/extensions/spring/guice-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/struts2/guice-struts2.iml" filepath="$PROJECT_DIR$/guice/extensions/struts2/guice-struts2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/testlib/guice-testlib.iml" filepath="$PROJECT_DIR$/guice/extensions/testlib/guice-testlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guice/extensions/throwingproviders/guice-throwingproviders.iml" filepath="$PROJECT_DIR$/guice/extensions/throwingproviders/guice-throwingproviders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto/value/src/it/gwtserializer/gwtserializer.iml" filepath="$PROJECT_DIR$/auto/value/src/it/gwtserializer/gwtserializer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackson-core/jackson-core.iml" filepath="$PROJECT_DIR$/jackson-core/jackson-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackson-databind/jackson-databind.iml" filepath="$PROJECT_DIR$/jackson-databind/jackson-databind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jackson-dataformat-xml/jackson-dataformat-xml.iml" filepath="$PROJECT_DIR$/jackson-dataformat-xml/jackson-dataformat-xml.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="functional" />
+        <module name="guice-jndi" />
+        <module name="jackson-core" />
+        <module name="guice-jmx" />
+        <module name="gwtserializer" />
+        <module name="commons-math4-legacy-exception" />
+        <module name="guice-assistedinject" />
+        <module name="commons-math4-core" />
+        <module name="auto-common" />
+        <module name="jackson-dataformat-xml" />
+        <module name="guice-servlet" />
+        <module name="commons-math4-neuralnet" />
+        <module name="examples-kmeans-image" />
+        <module name="guice-persist" />
+        <module name="guice-throwingproviders" />
+        <module name="jackson-databind" />
+        <module name="guice-dagger-adapter" />
+        <module name="examples-sofm-chinese-rings" />
+        <module name="guice-testlib" />
+        <module name="auto-value-annotations" />
+        <module name="guice-grapher" />
+        <module name="examples-sofm-tsp" />
+        <module name="guice-struts2" />
+        <module name="commons-math4-transform" />
+        <module name="commons-math4-legacy" />
+        <module name="commons-math4-legacy-core" />
+        <module name="guice-spring" />
+        <module name="guice" />
+      </profile>
+      <profile name="Annotation profile for AutoFactory" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/auto-common/1.2/auto-common-1.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/testing/compile/compile-testing/0.19/compile-testing-0.19.jar" />
+          <entry name="$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/truth/truth/1.1.3/truth-1.1.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/value/auto-value-annotations/1.9/auto-value-annotations-1.9.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/ow2/asm/asm/9.1/asm-9.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/value/auto-value/1.9/auto-value-1.9.jar" />
+          <entry name="$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-1.8.0_322/Contents/Home/jre/../lib/tools.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_type_annotations/2.10.0/error_prone_type_annotations-2.10.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/apache/velocity/velocity/1.7/velocity-1.7.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/guava/guava-testlib/31.0.1-jre/guava-testlib-31.0.1-jre.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/truth/extensions/truth-java8-extension/1.1.3/truth-java8-extension-1.1.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mockito/mockito-core/4.1.0/mockito-core-4.1.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/net/ltgt/gradle/incap/incap-processor/0.3/incap-processor-0.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/net/ltgt/gradle/incap/incap/0.3/incap-0.3.jar" />
+        </processorPath>
+        <module name="auto-factory" />
+      </profile>
+      <profile name="Annotation profile for AutoValue Parent" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="allowedMissingSerializableExtensionClasses" value=".*TestStringSerializerFactory" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/service/auto-service/1.0.1/auto-service-1.0.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/auto-common/1.2/auto-common-1.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/testing/compile/compile-testing/0.19/compile-testing-0.19.jar" />
+          <entry name="$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/truth/truth/1.1.3/truth-1.1.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/value/auto-value-annotations/1.8.1/auto-value-annotations-1.8.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/ow2/asm/asm/9.1/asm-9.1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/google/auto/value/auto-value/1.7.4/auto-value-1.7.4.jar" />
+          <entry name="$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-1.8.0_322/Contents/Home/jre/../lib/tools.jar" />
+          <entry name="$MAVEN_REPOSITORY$/net/ltgt/gradle/incap/incap-processor/0.3/incap-processor-0.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/net/ltgt/gradle/incap/incap/0.3/incap-0.3.jar" />
+        </processorPath>
+        <module name="auto-value" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auto-common" target="1.8" />
+      <module name="auto-factory" target="1.8" />
+      <module name="auto-service" target="1.8" />
+      <module name="auto-service-aggregator" target="1.5" />
+      <module name="auto-service-annotations" target="1.8" />
+      <module name="auto-value" target="1.8" />
+      <module name="auto-value-annotations" target="1.7" />
+      <module name="auto-value-parent" target="1.5" />
+      <module name="commons-math-examples" target="1.8" />
+      <module name="commons-math-parent" target="1.8" />
+      <module name="commons-math4-core" target="1.8" />
+      <module name="commons-math4-legacy" target="1.8" />
+      <module name="commons-math4-legacy-core" target="1.8" />
+      <module name="commons-math4-legacy-exception" target="1.8" />
+      <module name="commons-math4-neuralnet" target="1.8" />
+      <module name="commons-math4-transform" target="1.8" />
+      <module name="examples-kmeans" target="1.8" />
+      <module name="examples-kmeans-image" target="1.8" />
+      <module name="examples-sofm" target="1.8" />
+      <module name="examples-sofm-chinese-rings" target="1.8" />
+      <module name="examples-sofm-tsp" target="1.8" />
+      <module name="extensions-parent" target="1.5" />
+      <module name="functional" target="1.8" />
+      <module name="guice" target="1.8" />
+      <module name="guice-assistedinject" target="1.8" />
+      <module name="guice-bom" target="1.5" />
+      <module name="guice-dagger-adapter" target="1.8" />
+      <module name="guice-grapher" target="1.8" />
+      <module name="guice-jmx" target="1.8" />
+      <module name="guice-jndi" target="1.8" />
+      <module name="guice-parent" target="1.5" />
+      <module name="guice-persist" target="1.8" />
+      <module name="guice-servlet" target="1.8" />
+      <module name="guice-spring" target="1.8" />
+      <module name="guice-struts2" target="1.8" />
+      <module name="guice-testlib" target="1.8" />
+      <module name="guice-throwingproviders" target="1.8" />
+      <module name="gwtserializer" target="1.8" />
+      <module name="jackson-core" target="1.6" />
+      <module name="jackson-databind" target="1.8" />
+      <module name="jackson-dataformat-xml" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auto-common" options="-Xlint:all" />
+      <module name="auto-factory" options="-Xlint:all" />
+      <module name="auto-service" options="-proc:none" />
+      <module name="auto-service-annotations" options="-proc:none" />
+      <module name="auto-value" options="-Xlint:all -AallowedMissingSerializableExtensionClasses=.*TestStringSerializerFactory" />
+      <module name="auto-value-annotations" options="-Xlint:all" />
+      <module name="commons-math4-core" options="-Xlint:all,-options,-path" />
+      <module name="commons-math4-legacy" options="-Xlint:all,-options,-path" />
+      <module name="commons-math4-legacy-core" options="-Xlint:all,-options,-path" />
+      <module name="commons-math4-legacy-exception" options="-Xlint:all,-options,-path" />
+      <module name="commons-math4-neuralnet" options="-Xlint:all,-options,-path" />
+      <module name="commons-math4-transform" options="-Xlint:all,-options,-path" />
+      <module name="examples-kmeans-image" options="-Xlint:all,-options,-path" />
+      <module name="examples-sofm-chinese-rings" options="-Xlint:all,-options,-path" />
+      <module name="examples-sofm-tsp" options="-Xlint:all,-options,-path" />
+      <module name="functional" options="-Xlint:all -Xlint:all -encoding utf8" />
+      <module name="guice" options="-parameters" />
+      <module name="guice-assistedinject" options="-parameters" />
+      <module name="guice-dagger-adapter" options="-parameters" />
+      <module name="guice-grapher" options="-parameters" />
+      <module name="guice-jmx" options="-parameters" />
+      <module name="guice-jndi" options="-parameters" />
+      <module name="guice-persist" options="-parameters" />
+      <module name="guice-servlet" options="-parameters" />
+      <module name="guice-spring" options="-parameters" />
+      <module name="guice-struts2" options="-parameters" />
+      <module name="guice-testlib" options="-parameters" />
+      <module name="guice-throwingproviders" options="-parameters" />
+      <module name="gwtserializer" options="-Xlint:all" />
+    </option>
+  </component>
+</project>

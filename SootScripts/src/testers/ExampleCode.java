@@ -6,7 +6,12 @@ public class ExampleCode
 
 		new Print().bar();
 		int x = 20;
-		int y = 10;
+		int y;
+		if (x > 5) {
+			y = 10;
+		} else {
+			y = 5;
+		}
 		math(x,y);
 
 	}
