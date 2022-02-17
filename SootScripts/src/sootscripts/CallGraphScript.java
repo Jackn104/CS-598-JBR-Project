@@ -13,6 +13,9 @@ import java.util.Map;
 
 import soot.SceneTransformer;
 import soot.SootMethod;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class CallGraphScript
 {	
@@ -45,17 +48,34 @@ public class CallGraphScript
 				SootMethod src = Scene.v().getMainClass().getMethodByName("main");
 				List<SootMethod> nodes = new ArrayList<>();
 				nodes.add(src);
-				while(!nodes.isEmpty()){
-					SootMethod parent = nodes.get(0);
-					Iterator<MethodOrMethodContext> targets = new Targets(cg.edgesOutOf(parent));
-					while (targets.hasNext()) {
-						SootMethod child = (SootMethod) targets.next();
-						if(!child.getSignature().contains("init"))
-							nodes.add(child);
-						System.out.println(parent.getDeclaringClass()+"."+parent.getName()+
-								" -> " + child.getDeclaringClass()+"."+child.getName());
+
+				File file = new File("../GraphViz/DotFiles/CG.txt");
+				try {
+					file.delete();
+					file.createNewFile();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				FileWriter writer = null;
+				try {
+					writer = new FileWriter("../GraphViz/DotFiles/CG.txt");
+					writer.write("digraph {\n");
+					while(!nodes.isEmpty()){
+						SootMethod parent = nodes.get(0);
+						Iterator<MethodOrMethodContext> targets = new Targets(cg.edgesOutOf(parent));
+						while (targets.hasNext()) {
+							SootMethod child = (SootMethod) targets.next();
+							if(!child.getSignature().contains("init"))
+								nodes.add(child);
+							writer.write("\t"+parent.getDeclaringClass()+"."+parent.getName()+
+									" -> " + child.getDeclaringClass()+"."+child.getName()+"\n");
+						}
+						nodes.remove(0);
 					}
-					nodes.remove(0);
+					writer.write("}");
+					writer.close();
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
 			}
 

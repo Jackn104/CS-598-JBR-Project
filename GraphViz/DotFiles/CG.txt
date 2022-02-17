@@ -1,0 +1,8 @@
+digraph {
+	testers.ExampleCode.main -> testers.ExampleCode.math
+	testers.ExampleCode.main -> testers.Print.bar
+	testers.ExampleCode.main -> testers.Print.<init>
+	testers.ExampleCode.math -> testers.Print.<init>
+	testers.ExampleCode.math -> testers.Print.foo
+	testers.Print.foo -> testers.Print.bar
+}

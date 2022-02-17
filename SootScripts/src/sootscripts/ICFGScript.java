@@ -9,7 +9,9 @@ import soot.jimple.toolkits.ide.exampleproblems.IFDSReachingDefinitions;
 import soot.jimple.toolkits.ide.icfg.JimpleBasedInterproceduralCFG;
 import soot.toolkits.scalar.Pair;
 import soot.options.Options;
-
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 // Subclass of SceneTransformer to run Heros IFDS solver in Soot's "wjtp" pack
@@ -30,22 +32,38 @@ public class ICFGScript extends SceneTransformer {
 
         SootMethod src = Scene.v().getMainClass().getMethodByName("main");
         List<Unit> nodes = (List) icfg.getStartPointsOf(src);
-        while(!nodes.isEmpty()){
-            Unit parent = nodes.get(0);
-            List<Unit> targets = icfg.getSuccsOf(parent);
-            while (!targets.isEmpty()) {
-                Unit child = targets.get(0);
-                nodes.add(child);
-                System.out.println(parent.toString() + " -> " + child.toString());
-                targets.remove(0);
+
+        File file = new File("../GraphViz/DotFiles/ICFG.txt");
+        try {
+            file.delete();
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        FileWriter writer = null;
+        try {
+            writer = new FileWriter("../GraphViz/DotFiles/ICFG.txt");
+            writer.write("digraph {\n");
+            while(!nodes.isEmpty()){
+                Unit parent = nodes.remove(0);
+                List<Unit> targets = icfg.getSuccsOf(parent);
+                while (!targets.isEmpty()) {
+                    Unit child = targets.get(0);
+                    nodes.add(child);
+                    writer.write("\t\"" + parent.toString() + "\" -> \"" + child.toString()+ "\"\n");
+                    targets.remove(0);
+                }
             }
-            nodes.remove(0);
+            writer.write("}");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     public static void main(String args[]) {
         // Soot classpath
-        String path = System.getProperty("user.dir")+"/src";
+        String path = System.getProperty("user.dir")+"/src";//"/../commons-math/commons-math-core/src";
 
         // Setting the classpath programatically
         Options.v().set_prepend_classpath(true);
