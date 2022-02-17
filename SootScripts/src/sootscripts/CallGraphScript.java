@@ -67,8 +67,8 @@ public class CallGraphScript
 							SootMethod child = (SootMethod) targets.next();
 							if(!child.getSignature().contains("init"))
 								nodes.add(child);
-							writer.write("\t"+parent.getDeclaringClass()+"."+parent.getName()+
-									" -> " + child.getDeclaringClass()+"."+child.getName()+"\n");
+							writer.write("\t\""+parent.getDeclaringClass()+"."+parent.getName()+
+									"\" -> \"" + child.getDeclaringClass()+"."+child.getName()+"\"\n");
 						}
 						nodes.remove(0);
 					}
