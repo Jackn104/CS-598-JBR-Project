@@ -21,7 +21,7 @@ public class CallGraphScript
 {	
 	public static void main(String[] args) {
 		// Soot classpath
-		String path = System.getProperty("user.dir")+"/../auto/common/src";
+		String path = System.getProperty("user.dir") + "/" + args[0];
 
 		// Setting the classpath programatically
 		Options.v().set_prepend_classpath(true);
@@ -31,6 +31,7 @@ public class CallGraphScript
 		Options.v().set_whole_program(true);
 		Options.v().set_app(true);
 
+		Scene.v().loadNecessaryClasses();
 		args = new String[]{"-w", "-process-dir", path};
 
 		PackManager.v().getPack("wjtp").add(new Transform("wjtp.myTrans", new SceneTransformer() {

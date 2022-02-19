@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/call_graph.iml" filepath="$PROJECT_DIR$/call_graph.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SootScripts.iml" filepath="$PROJECT_DIR$/SootScripts.iml" />
     </modules>
   </component>
 </project>

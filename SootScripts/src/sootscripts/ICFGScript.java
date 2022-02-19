@@ -71,7 +71,7 @@ public class ICFGScript extends SceneTransformer {
 
     public static void main(String args[]) {
         // Soot classpath
-        String path = System.getProperty("user.dir")+"/../auto/common/src";
+        String path = System.getProperty("user.dir") + "/" + args[0];
 
         // Setting the classpath programatically
         Options.v().set_prepend_classpath(true);
