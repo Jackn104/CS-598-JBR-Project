@@ -1,3 +1,6 @@
+
+#The only thing that needs to change is the ExampleCode portion of the file opening 
+
 f = open("ExampleCodeAST.txt")
 l = f.readlines()
 
