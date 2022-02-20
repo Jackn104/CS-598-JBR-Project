@@ -195,6 +195,13 @@ For Interprocedural Control Flow Graph, we use the soot analysis tool in the fol
 ```
 SootScripts/src/sootscripts/ICFGScript.java
 ```
+
+	
+Here is what the run in command line will look like:
+# TODO NEED MORE INFO FOR MAIN CLASS 
+```
+Python analysis.py -d path -g ICFG -f ExampleCode.java -m
+```
 	
 <details>
   <summary>ICFGScript.java</summary>
@@ -395,14 +402,6 @@ digraph {
 	
 ![This is an image](https://media.discordapp.net/attachments/942159728287572099/945031339445452840/testers-ICFG.png?width=412&height=676)
 </details>
-
-
-Here is what the run in command line will look like:
-# TODO NEED MORE INFO FOR MAIN CLASS 
-```
-Python analysis.py -d path -g ICFG -f ExampleCode.java -m
-```
-	
 
 
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the main class and method are located as well.
