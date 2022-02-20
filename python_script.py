@@ -52,10 +52,12 @@ def run_analysis(directory, graph):
 
 def make_graph(directory, graph):
     graph_path = f'Graphviz/DotFiles/{graph}.txt'
-    dir_name = dir.split('/')[0]
-    output_file = f'Graphviz/GraphFilesPNG/-{graph}.png'
+    dir_name = directory.split('/')[0]
+    output_file = f'Graphviz/GraphFilesPNG/{dir_name}-{graph}.png'
+    print("running")
     cmd = ['dot', '-Tpng', graph_path, '-o', output_file]
     run(cmd)
+    print("done")
 
 # compile_java(args['filename']) #may not need to compile if we're passing in .class files
 run_analysis(dir, graph)
