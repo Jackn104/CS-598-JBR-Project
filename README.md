@@ -107,9 +107,9 @@ Here is what the run in command line will look for:
 Python analysis.py -d path -g CG -f ExampleCode.java
 ```
 
-Step 1) Code -> Analysis
+<strong> Step 1) Code -> Analysis</strong>
 
-Step 2) Anaylsis -> Graph
+<strong>Step 2) Anaylsis -> Graph</strong>
 
 
 	
