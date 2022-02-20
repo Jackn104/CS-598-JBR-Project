@@ -158,7 +158,8 @@ class Print
 
 }
 ```
-	</details>
+
+</details>
 	
 	
 <details>
@@ -174,7 +175,7 @@ digraph {
     "testers.Print.foo" -> testers.Print.bar
 }
 ```
-	</details>
+</details>
 	
 
 <details>
@@ -184,7 +185,7 @@ digraph {
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 ```
 
-	</details>
+</details>
 	
 	
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the code has been compiled and class files are available to be run on, otherwise it will not run correctly. 
