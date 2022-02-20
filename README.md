@@ -423,8 +423,8 @@ Python analysis.py -d path -g AST -f ExampleCode.java
 
 <details>
   <summary>check_to_graphViz.py</summary>
+	
 ``` 
-
 f = open("SootScripts/out/artifacts/AST_Stuff/AST.txt")
 l = f.readlines()
 
@@ -466,11 +466,13 @@ for line in all_text:
     print(line, end ='')
 
 ```
+	
 </details>
 
 	
 <details>
   <summary>pipe.py</summary>
+	
 ```
 import os
 import subprocess
@@ -480,6 +482,7 @@ os.system("java -jar SootScripts/out/artifacts/AST_Stuff/checkstyle-9.3-all.jar 
 os.system("py SootScripts/out/artifacts/AST_Stuff/check_to_graphViz.py>SootScripts/out/artifacts/AST_Stuff/ExampleCodeDot.txt")
 run('dot -Tpng SootScripts/out/artifacts/AST_Stuff/ExampleCodeDot.txt -o GraphViz/GraphFilesPNG/ExampleCodeAST.png')
 ```
+	
 </details>
 	
 <strong> Step 1) Code -> CheckStyle Analysis</strong>
@@ -489,7 +492,9 @@ run('dot -Tpng SootScripts/out/artifacts/AST_Stuff/ExampleCodeDot.txt -o GraphVi
 <strong>Step 3) Python Parser -> Graph </strong>
 	
 <details>
+	
   <summary>ExampleCode.java</summary>
+	
 ```
 package testers;
 
@@ -524,6 +529,7 @@ class Print
 
 }
 ```
+	
 </details>
 	
 	
