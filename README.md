@@ -1,4 +1,4 @@
-### CS-598-JBR-Project
+# CS-598-JBR-Project
 
 Our project relies on these, so make sure to have updated versions of each.
 - Java
@@ -27,7 +27,7 @@ Note: All Visual Representations are found in the
 We create three different representations of Call Graph, Interprocedural Control Flow Graph, and Abstract Syntax Trees.
 
 
-# Call Graph
+### Call Graph
 For Call Graphs, we use the soot analysis tool in the following directory:
 '''
 SootScripts/src/sootscripts/CallGraphScript.java
@@ -37,7 +37,7 @@ Step 1) Code -> Analysis
 
 Step 2) Anaylsis -> Graph
 
-##### TODO
+# TODO
 ExampleCode
 ExampleCode.dot
 ExampleCode.png
