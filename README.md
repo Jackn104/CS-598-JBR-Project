@@ -102,18 +102,19 @@ public class CallGraphScript
 ```
 </details>
 
+Here is what the run in command line will look for:
+```
+Python analysis.py -d path -g CG -f ExampleCode.java
+```
 
 Step 1) Code -> Analysis
 
 Step 2) Anaylsis -> Graph
 
-Here is what the run in command line will look for:
-```
-Python analysis.py -d path -g CG -f ExampleCode.java
-```
+
 	
 <details>
-  <summary>ExampleCode.java</summary>
+  <summary>ExampleCode.java (Code)</summary>
 
 ```
 package testers;
@@ -159,7 +160,7 @@ class Print
 	
 	
 <details>
-  <summary>CG Dot File</summary>
+  <summary>CG Dot File (Analysis Formatted)</summary>
 
 ```
 digraph {
@@ -175,7 +176,7 @@ digraph {
 	
 
 <details>
-  <summary>ExampleCode.png</summary>
+  <summary>ExampleCode.png (Graph)</summary>
 
 
 ![This is an image](https://media.discordapp.net/attachments/942159728287572099/945031339252523088/testers-CG.png)
