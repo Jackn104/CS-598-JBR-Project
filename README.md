@@ -18,7 +18,7 @@ Our project focuses on static analysis of Java Code.
 We use python to create a pipeline that conviniently runs all of our code together:
 
 ```
-Python python_script.py -d <the path to the directory to analyze (Required)> -g <set type of graph (Required)> -f <set file name (Optional)> -c <set main class (Optional)>
+Python analysis.py -d <the path to the directory to analyze (Required)> -g <set type of graph (Required)> -f <set file name (Optional)> -c <set main class (Optional)>
 ```
 Note: All Visual Representations are found in the 
 ```GraphViz/GraphFilesPNG``` folder named appropriately based on the analyzed file and graph representation.
@@ -106,11 +106,18 @@ Step 1) Code -> Analysis
 
 Step 2) Anaylsis -> Graph
 
+Here is what the run in command line will look for:
+```
+Python analysis.py -d path -g CG -f ExampleCode.java
+```
+	
 # TODO
+- ExampleCode.java
+- ExampleCode.dot
+- ExampleCode.png
+	
+### Interprocedural Control Flow Graph
+	
+### Abstract Syntax Trees
 
 
-
-
-ExampleCode
-ExampleCode.dot
-ExampleCode.png
