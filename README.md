@@ -320,20 +320,90 @@ public class ICFGScript {
 	
 </details>
 	
-Step 1) Code -> Analysis
+<strong>Step 1) Code -> Analysis</strong>
 
-Step 2) Anaylsis -> Graph
+<strong>Step 2) Anaylsis -> Graph</strong>
 
-Here is what the run in command line will look for:
+<details>
+  <summary>ExampleCode.java</summary>
+	
+```
+package testers;
+
+public class ExampleCode
+{
+    public static void main(String[] args) {
+
+        new Print().bar();
+        int x = 20;
+        int y;
+        if (x > 10)
+            y = 10;
+        else
+            y = 5;
+        math(x,y);
+
+    }
+
+    public static void math(int x, int y) {
+        int sum = x+y;
+        int mul = x*y;
+        int sub = x-y;
+        new Print().foo();
+    }
+
+}
+
+class Print
+{
+    public void foo() {
+        bar();
+    }
+
+    public void bar() {
+    }
+
+	
+```
+</details>
+
+<details>
+  <summary> ICFG Dot File</summary>
+	
+```
+digraph {
+
+    "args := @parameter0: java.lang.String[]" -> "temp$0 = new testers.Print"
+    "temp$0 = new testers.Print" -> "specialinvoke temp$0.<testers.Print: void <init>()>()"
+    "specialinvoke temp$0.<testers.Print: void <init>()>()" -> "virtualinvoke temp$0.<testers.Print: void bar()>()"
+    "virtualinvoke temp$0.<testers.Print: void bar()>()" -> "x = 20"
+    "x = 20" -> "if x > 10"
+    "if x > 10" -> "temp$1 = 10"
+    "if x > 10" -> "temp$2 = 5"
+    "temp$1 = 10" -> "y = temp$1"
+    "temp$2 = 5" -> "y = temp$2"
+    "y = temp$1" -> "staticinvoke <testers.ExampleCode: void math(int,int)>(x, y)"
+    "y = temp$2" -> "staticinvoke <testers.ExampleCode: void math(int,int)>(x, y)"
+    "staticinvoke <testers.ExampleCode: void math(int,int)>(x, y)" -> "return"
+}
+```
+</details>
+
+	
+<details>
+  <summary>ExampleCode.png</summary>
+	
+![This is an image](https://media.discordapp.net/attachments/942159728287572099/945031339445452840/testers-ICFG.png?width=412&height=676)
+</details>
+
+
+Here is what the run in command line will look like:
 # TODO NEED MORE INFO FOR MAIN CLASS 
 ```
-Python analysis.py -d path -g ICFG -f ExampleCode.java
+Python analysis.py -d path -g ICFG -f ExampleCode.java -m
 ```
 	
-# TODO
-- ExampleCode.java
-- ExampleCode.dot
-- ExampleCode.png
+
 
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the main class and method are located as well.
 	
