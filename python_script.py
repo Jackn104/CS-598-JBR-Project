@@ -1,5 +1,6 @@
 from argparse import ArgumentParser
 from pathlib import Path
+import os
 import subprocess
 from subprocess import run
 
@@ -9,10 +10,13 @@ requiredArgs.add_argument("-d", "--dir", dest="directory",
                     help="the path to the directory to analyze", required=True)
 requiredArgs.add_argument("-g", "--graph", dest="graph",
                     help="set type of graph", required=True)
+requiredArgs.add_argument("-f", "--file", dest="file",
+                    help="set file name", required=False)
 
 args = vars(parser.parse_args())
 dir = args['directory']
 graph = args['graph']
+file = args['file']
 
 try: 
     #Attempt to access file location and ensure that file exists there: 
@@ -30,9 +34,18 @@ def compile_java(directory):
     subprocess.check_call(['javac', directory])
 
 def run_analysis(directory, graph):
-    jar_path = f"SootScripts/out/artifacts/{graph}_jar/SootScripts.jar"
-    cmd = ['java', '-jar', jar_path, directory]
-    run(cmd)
+    if graph in ["CG", "ICFG"]:
+        jar_path = f"SootScripts/out/artifacts/{graph}_jar/SootScripts.jar"
+        cmd = ['java', '-jar', jar_path, directory]
+        run(cmd)
+    else:
+        os.system("py SootScripts/out/artifacts/AST_Stuff/pipe.py")
+        # jar_path = "SootScripts/out/artifacts/AST_Stuff/checkstyle-9.3-all.jar"
+        # cmd = "java -jar " +jar_path + " -t " + directory +"/ExampleCode.java"+">"+directory+"/AST.txt"
+        # os.system(cmd)
+        # print("done1")
+        # os.system("py SootScripts/out/artifacts/AST_Stuff/check_to_graphViz.py>SootScripts/out/artifacts/AST_Stuff/AST.txt")
+    # print("done")
     # proc = subprocess.Popen(cmd, stdin=PIPE, stdout=PIPE, stderr=STDOUT)
     # stdout,stderr = proc.communicate(stdin) #wanting to pass in info to java file that is using Scanner
     # print ('This was "' + stdout.decode("utf-8") + '"')
@@ -40,7 +53,7 @@ def run_analysis(directory, graph):
 def make_graph(directory, graph):
     graph_path = f'Graphviz/DotFiles/{graph}.txt'
     dir_name = dir.split('/')[0]
-    output_file = f'Graphviz/GraphFilesPNG/{dir_name}-{graph}.png'
+    output_file = f'Graphviz/GraphFilesPNG/-{graph}.png'
     cmd = ['dot', '-Tpng', graph_path, '-o', output_file]
     run(cmd)
 
