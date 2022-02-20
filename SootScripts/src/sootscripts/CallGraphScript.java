@@ -44,9 +44,8 @@ public class CallGraphScript
 			Iterator<Edge> edgeIterator = cg.iterator();
 			while(edgeIterator.hasNext()){
 				Edge edge = edgeIterator.next();
-				if (edge.src().isJavaLibraryMethod())
+				if (edge.src().isJavaLibraryMethod() || edge.src().getDeclaringClass().getName().startsWith("jdk"))
 					continue;
-				edge.src().
 
 				SootMethod src = edge.src();
 				SootMethod tgt = edge.tgt();
