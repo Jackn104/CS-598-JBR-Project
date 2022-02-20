@@ -408,5 +408,24 @@ Note that this code will run on entire directories if the -f argument is omitted
 	
 	
 ### Abstract Syntax Trees
+For Abstract Syntax Trees, we use the soot analysis tool in the following directory:
+```
+SootScripts/out/artifacts/AST_Stuff/check_to_graphViz.py
+```
+	and 
+```
+SootScripts/out/artifacts/AST_Stuff/pipe.py
+```
+	
+Here is what the run in command line will look like:
 
+```
+Python analysis.py -d path -g AST -f ExampleCode.java
+```
 
+<details>
+  <summary>check_to_graphViz.py</summary>
+	![code](https://github.com/Jackn104/CS-598-JBR-Project/blob/main/SootScripts/out/artifacts/AST_Stuff/check_to_graphViz.py)
+```
+```
+	</details>
