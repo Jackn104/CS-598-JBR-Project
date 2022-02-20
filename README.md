@@ -470,7 +470,7 @@ for line in all_text:
     print(line, end ='')
 
 ```
-
+</details>
 	
 <details>
   <summary>pipe.py</summary>
@@ -814,6 +814,7 @@ digraph{
 }
 ```
 </details>
+	
 <details>
   <summary>check_to_graphViz.py</summary>
 ![this is an image](https://raw.githubusercontent.com/Jackn104/CS-598-JBR-Project/main/SootScripts/out/artifacts/AST_Stuff/ExampleCodeAST.png)
