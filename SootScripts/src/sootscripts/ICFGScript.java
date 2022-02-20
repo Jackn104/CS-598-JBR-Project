@@ -18,46 +18,62 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-// Subclass of SceneTransformer to run Heros IFDS solver in Soot's "wjtp" pack
-public class ICFGScript
-{
+public class ICFGScript {
     public static void main(String args[]) {
         // Soot classpath
-        String path = System.getProperty("user.dir") + "/" + "../Java-Games-master/out/production/Catch"; //args[0];
+        String path = System.getProperty("user.dir") + "/" + args[0];
+        String cls = args[1];
 
         // Setting the classpath programatically
         Options.v().set_prepend_classpath(true);
         Options.v().set_soot_classpath(path);
+
+        // Enable whole-program mode
         Options.v().set_whole_program(true);
+        Options.v().set_app(true);
         Options.v().set_allow_phantom_refs(true);
 
         // Call-graph options
+        Options.v().setPhaseOption("cg", "safe-newinstance:true");
         Options.v().setPhaseOption("cg.cha","enabled:false");
         Options.v().setPhaseOption("cg.spark","enabled:true");
         Options.v().setPhaseOption("cg.spark","verbose:true");
         Options.v().setPhaseOption("cg.spark","on-fly-cg:true");
 
-        args = new String[] {"-w", "-process-dir", path};
+        // Set the main class of the application to be analysed
+        Options.v().set_main_class(cls);
 
-        PackManager.v().getPack("wjtp").add(new Transform("wjtp.ifds", new SceneTransformer() {
-            protected void internalTransform(String phaseName, Map<String, String> options) {
+        // Load the main class
+        SootClass c = Scene.v().loadClass(cls, SootClass.BODIES);
+        c.setApplicationClass();
+
+        // Load the "main" method of the main class and set it as a Soot entry point
+        SootMethod entryPoint = c.getMethodByName("main");
+        List<SootMethod> entryPoints = new ArrayList<SootMethod>();
+        entryPoints.add(entryPoint);
+        Scene.v().setEntryPoints(entryPoints);
+
+        // Set the args
+        args = new String[]{"-w", cls};
+
+        PackManager.v().getPack("wjtp").add(new Transform("wjtp.herosifds", new SceneTransformer() {
+            @Override
+            protected void internalTransform(String s, Map<String, String> map) {
                 JimpleBasedInterproceduralCFG icfg = new JimpleBasedInterproceduralCFG();
-                System.out.println(0);
                 IFDSTabulationProblem<Unit, Pair<Value,
                         Set<DefinitionStmt>>, SootMethod,
                         InterproceduralCFG<Unit, SootMethod>> problem = new IFDSReachingDefinitions(icfg);
 
                 IFDSSolver<Unit, Pair<Value, Set<DefinitionStmt>>,
-                                        SootMethod, InterproceduralCFG<Unit, SootMethod>> solver =
+                        SootMethod, InterproceduralCFG<Unit, SootMethod>> solver =
                         new IFDSSolver<Unit, Pair<Value, Set<DefinitionStmt>>, SootMethod,
                                 InterproceduralCFG<Unit, SootMethod>>(problem);
-                System.out.println(1);
-                solver.solve();
-                System.out.println(2);
-                SootMethod src = Scene.v().getMainClass().getMethodByName("main");
-                System.out.println(3);
-                List<Unit> nodes = (List) icfg.getStartPointsOf(src);
 
+                System.out.println("Starting Solver");
+                solver.solve();
+                System.out.println("Done");
+                SootMethod src = Scene.v().getMainClass().getMethodByName("main");
+                List<Unit> nodes = (List) icfg.getStartPointsOf(src);
                 File file = new File("GraphViz/DotFiles/ICFG.txt");
                 try {
                     file.delete();
@@ -95,20 +111,35 @@ public class ICFGScript
             }
         }));
 
-        // Set the main class of the application to be analysed
-        String cls = "PlayCatch"; //args[1];
-        Options.v().set_main_class(cls);
-
-        // Load the main class
-        SootClass c = Scene.v().loadClass(cls, SootClass.BODIES);
-        c.setApplicationClass();
-
-        // Load the "main" method of the main class and set it as a Soot entry point
-        SootMethod entryPoint = c.getMethodByName("main");
-        List<SootMethod> entryPoints = new ArrayList<SootMethod>();
-        entryPoints.add(entryPoint);
-        Scene.v().setEntryPoints(entryPoints);
-
         soot.Main.main(args);
     }
 }
+
+//
+//        args = new String[] {"-w", "-process-dir", path};
+
+//
+
+
+
+
+
+//        }));
+//
+//        // Set the main class of the application to be analysed
+//        String cls = "testers.ExampleCode";//"com.iluwatar.hexagonal.App"; //args[1];
+//        Options.v().set_main_class(cls);
+//
+//        // Load the main class
+//        SootClass c = Scene.v().loadClass(cls, SootClass.BODIES);
+//        c.setApplicationClass();
+//
+//        // Load the "main" method of the main class and set it as a Soot entry point
+//        SootMethod entryPoint = c.getMethodByName("main");
+//        List<SootMethod> entryPoints = new ArrayList<SootMethod>();
+//        entryPoints.add(entryPoint);
+//        Scene.v().setEntryPoints(entryPoints);
+//
+//        soot.Main.main(args);
+//    }
+//}

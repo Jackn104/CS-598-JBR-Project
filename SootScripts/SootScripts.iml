@@ -8,6 +8,5 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sootclasses-trunk-jar-with-dependencies" level="project" />
-    <orderEntry type="library" name="soot-infoflow-cmd-2.9.0-jar-with-dependencies" level="project" />
   </component>
 </module>

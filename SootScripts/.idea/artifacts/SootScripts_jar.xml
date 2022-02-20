@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="SootScripts:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/CG_jar</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/ICFG_jar</output-path>
     <root id="archive" name="SootScripts.jar">
       <element id="module-output" name="SootScripts" />
       <element id="extracted-dir" path="$PROJECT_DIR$/sootclasses-trunk-jar-with-dependencies.jar" path-in-jar="/" />
