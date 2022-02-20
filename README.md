@@ -29,7 +29,6 @@ We create three different representations of Call Graph, Interprocedural Control
 <br>
 
 ### Call Graph
-<br>
 For Call Graphs, we use the soot analysis tool in the following directory:
 ```
 SootScripts/src/sootscripts/CallGraphScript.java
