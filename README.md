@@ -423,9 +423,7 @@ Python analysis.py -d path -g AST -f ExampleCode.java
 
 <details>
   <summary>check_to_graphViz.py</summary>
-```
-#The only thing that needs to change is the ExampleCode portion of the file opening 
-         
+``` 
 
 f = open("SootScripts/out/artifacts/AST_Stuff/AST.txt")
 l = f.readlines()
