@@ -120,7 +120,11 @@ Python analysis.py -d path -g CG -f ExampleCode.java
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the code has been compiled and class files are available to be run on, otherwise it will not run correctly. 
 	
 ### Interprocedural Control Flow Graph
-	
+
+For Interprocedural Control Flow Graph, we use the soot analysis tool in the following directory:
+```
+SootScripts/src/sootscripts/ICFGScript.java
+```
 	
 <details>
   <summary>ICFGScript.java</summary>
@@ -245,6 +249,24 @@ public class ICFGScript {
 ```
 	
 </details>
+	
+Step 1) Code -> Analysis
+
+Step 2) Anaylsis -> Graph
+
+Here is what the run in command line will look for:
+# TODO NEED MORE INFO FOR MAIN CLASS 
+```
+Python analysis.py -d path -g ICFG -f ExampleCode.java
+```
+	
+# TODO
+- ExampleCode.java
+- ExampleCode.dot
+- ExampleCode.png
+
+Note that this code will run on entire directories if the -f argument is omitted. Make sure the main class and method are located as well.
+	
 	
 ### Abstract Syntax Trees
 
