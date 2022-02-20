@@ -113,7 +113,7 @@ Python analysis.py -d path -g CG -f ExampleCode.java
 
 
 	
-&nbsp;&nbsp;&nbsp;&nbsp;<details>
+<space><space><space><space><space><space><details>
   <summary>ExampleCode.java (Code)</summary>
 
 ```
