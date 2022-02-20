@@ -535,6 +535,7 @@ class Print
 	
 <details>
   <summary>AST.txt</summary>
+	
 ```
 COMPILATION_UNIT -> COMPILATION_UNIT [1:0]
 |--PACKAGE_DEF -> package [1:0]
@@ -713,10 +714,12 @@ COMPILATION_UNIT -> COMPILATION_UNIT [1:0]
         |       `--RCURLY -> } [30:1]
         `--RCURLY -> } [32:0]
 ```
+	
 </details>
 	
 <details>
   <summary>ExampleCodeDot.txt</summary>
+	
 ```
 digraph{ 
 "COMPILATION_UNIT:COMPILATION_UNIT [1:0]" -> "PACKAGE_DEF:package [1:0]"
@@ -815,7 +818,9 @@ digraph{
 "EXPR:EXPR [26:5]" -> "METHOD_CALL:( [26:5]"
 
 }
+	
 ```
+	
 </details>
 	
 <details>
