@@ -825,5 +825,7 @@ digraph{
 	
 <details>
   <summary>check_to_graphViz.py</summary>
+	
 ![This is an image](https://media.discordapp.net/attachments/942159728287572099/944695792336261190/q.png?width=1440&height=65)
+	
 </details>
