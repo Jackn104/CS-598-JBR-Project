@@ -123,7 +123,8 @@ Note that this code will run on entire directories if the -f argument is omitted
 	
 	
 <details>
-  <summary>ICFGScript.java</summary>	
+  <summary>ICFGScript.java</summary>
+```
 package sootscripts;
 
 import heros.IFDSTabulationProblem;
