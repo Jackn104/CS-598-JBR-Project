@@ -430,8 +430,6 @@ Python analysis.py -d path -g AST -f ExampleCode.java
 f = open("SootScripts/out/artifacts/AST_Stuff/AST.txt")
 l = f.readlines()
 
-
-
 def clean_lines(txt):     
     return txt.replace(" -> ",":")
         
@@ -471,6 +469,7 @@ for line in all_text:
 
 ```
 </details>
+
 	
 <details>
   <summary>pipe.py</summary>
