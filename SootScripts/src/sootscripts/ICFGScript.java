@@ -114,32 +114,3 @@ public class ICFGScript {
         soot.Main.main(args);
     }
 }
-
-//
-//        args = new String[] {"-w", "-process-dir", path};
-
-//
-
-
-
-
-
-//        }));
-//
-//        // Set the main class of the application to be analysed
-//        String cls = "testers.ExampleCode";//"com.iluwatar.hexagonal.App"; //args[1];
-//        Options.v().set_main_class(cls);
-//
-//        // Load the main class
-//        SootClass c = Scene.v().loadClass(cls, SootClass.BODIES);
-//        c.setApplicationClass();
-//
-//        // Load the "main" method of the main class and set it as a Soot entry point
-//        SootMethod entryPoint = c.getMethodByName("main");
-//        List<SootMethod> entryPoints = new ArrayList<SootMethod>();
-//        entryPoints.add(entryPoint);
-//        Scene.v().setEntryPoints(entryPoints);
-//
-//        soot.Main.main(args);
-//    }
-//}
