@@ -27,7 +27,6 @@ Note: All Visual Representations are found in the
 We create three different representations of Call Graph, Interprocedural Control Flow Graph, and Abstract Syntax Trees.
 
 <br>
-<br>
 
 ### Call Graph
 <br>
@@ -188,7 +187,6 @@ digraph {
 	
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the code has been compiled and class files are available to be run on, otherwise it will not run correctly. 
 
-<br>
 <br>
 
 ### Interprocedural Control Flow Graph
