@@ -41,7 +41,7 @@ Step 2) Anaylsis -> Graph
 <details>
   <summary>CallGraphScript.java</summary>
   
-'''
+```
 	
 package sootscripts;
 
@@ -105,7 +105,7 @@ public class CallGraphScript
 	}
 }
 	
-'''
+```
   
 </details>
 
