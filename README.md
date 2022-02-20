@@ -177,13 +177,13 @@ digraph {
 ```
 </details>
 	
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
 <details>
   <summary>ExampleCode.java</summary>
 
-```
+
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
-```
+
 
 </details>
 	
