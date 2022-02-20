@@ -116,6 +116,76 @@ Python analysis.py -d path -g CG -f ExampleCode.java
 - ExampleCode.dot
 - ExampleCode.png
 	
+<details>
+  <summary>ExampleCode.java</summary>
+
+```
+package testers;
+
+
+public class ExampleCode
+{
+    public static void main(String[] args) {
+
+        new Print().bar();
+        int x = 20;
+        int y;
+        if (x > 10)
+            y = 10;
+        else
+            y = 5;
+        math(x,y);
+
+    }
+
+    public static void math(int x, int y) {
+        int sum = x+y;
+        int mul = x*y;
+        int sub = x-y;
+        new Print().foo();
+    }
+
+}
+
+class Print
+{
+    public void foo() {
+        bar();
+    }
+
+    public void bar() {
+    }
+
+}
+```
+	</details>
+	
+	
+<details>
+  <summary>CG Dot File</summary>
+
+```
+digraph {
+    "testers.ExampleCode.main" -> "testers.ExampleCode.math"
+    "testers.ExampleCode.main" -> "testers.Print.bar"
+    "testers.ExampleCode.main" -> "testers.Print.<init>"
+    "testers.ExampleCode.math" -> "testers.Print.<init>"
+    "testers.ExampleCode.math" -> "testers.Print.foo"
+    "testers.Print.foo" -> testers.Print.bar
+}
+```
+	</details>
+	
+
+<details>
+  <summary>ExampleCode.java</summary>
+
+```
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+```
+
+	</details>
+	
 	
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the code has been compiled and class files are available to be run on, otherwise it will not run correctly. 
 	
