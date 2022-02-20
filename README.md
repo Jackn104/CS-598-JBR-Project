@@ -41,10 +41,9 @@ Step 2) Anaylsis -> Graph
 <details>
   <summary>CallGraphScript.java</summary>
   
-
 '''
 	
-  package sootscripts;
+package sootscripts;
 
 import soot.*;
 import soot.jimple.toolkits.callgraph.CallGraph;
@@ -107,7 +106,6 @@ public class CallGraphScript
 }
 	
 '''
-  
   
 </details>
 
