@@ -179,10 +179,10 @@ digraph {
 	
 
 <details>
-  <summary>ExampleCode.java</summary>
+  <summary>ExampleCode.png</summary>
 
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://media.discordapp.net/attachments/942159728287572099/945031339252523088/testers-CG.png)
 
 
 </details>
