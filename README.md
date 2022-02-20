@@ -29,12 +29,13 @@ We create three different representations of Call Graph, Interprocedural Control
 
 
 ### Call Graph
-
-
-	For Call Graphs, we use the soot analysis tool in the following directory:
-	```
-	SootScripts/src/sootscripts/CallGraphScript.java
-	```
+ 
+ 
+  
+For Call Graphs, we use the soot analysis tool in the following directory:
+```
+SootScripts/src/sootscripts/CallGraphScript.java
+```
 <details>
   <summary>CallGraphScript.java</summary>
   
@@ -187,6 +188,13 @@ digraph {
 	
 	
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the code has been compiled and class files are available to be run on, otherwise it will not run correctly. 
+	
+	
+	
+	
+	
+	
+	
 	
 ### Interprocedural Control Flow Graph
 
