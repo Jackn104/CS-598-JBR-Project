@@ -190,7 +190,6 @@ Note that this code will run on entire directories if the -f argument is omitted
 
 <br>
 <br>
-<br>
 
 ### Interprocedural Control Flow Graph
 
