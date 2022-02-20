@@ -826,6 +826,6 @@ digraph{
 <details>
   <summary>check_to_graphViz.py</summary>
 	
-![This is an image](https://media.discordapp.net/attachments/942159728287572099/944695792336261190/q.png?width=1440&height=65)
+![This is an image](https://raw.githubusercontent.com/Jackn104/CS-598-JBR-Project/main/SootScripts/out/artifacts/AST_Stuff/ExampleCodeAST.png)
 	
 </details>
