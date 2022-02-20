@@ -26,12 +26,11 @@ Note: All Visual Representations are found in the
 ## Details
 We create three different representations of Call Graph, Interprocedural Control Flow Graph, and Abstract Syntax Trees.
 
-
+<br>
+<br>
 
 ### Call Graph
- 
- 
-  
+<br>
 For Call Graphs, we use the soot analysis tool in the following directory:
 ```
 SootScripts/src/sootscripts/CallGraphScript.java
@@ -188,14 +187,11 @@ digraph {
 	
 	
 Note that this code will run on entire directories if the -f argument is omitted. Make sure the code has been compiled and class files are available to be run on, otherwise it will not run correctly. 
-	
-	
-	
-	
-	
-	
-	
-	
+
+<br>
+<br>
+<br>
+<br>
 ### Interprocedural Control Flow Graph
 
 For Interprocedural Control Flow Graph, we use the soot analysis tool in the following directory:
