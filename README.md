@@ -124,6 +124,7 @@ Note that this code will run on entire directories if the -f argument is omitted
 	
 <details>
   <summary>ICFGScript.java</summary>
+	
 ```
 package sootscripts;
 
@@ -242,6 +243,7 @@ public class ICFGScript {
     }
 }
 ```
+	
 </details>
 	
 ### Abstract Syntax Trees
