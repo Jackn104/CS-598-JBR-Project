@@ -111,11 +111,6 @@ Here is what the run in command line will look for:
 Python analysis.py -d path -g CG -f ExampleCode.java
 ```
 	
-# TODO
-- ExampleCode.java
-- ExampleCode.dot
-- ExampleCode.png
-	
 <details>
   <summary>ExampleCode.java</summary>
 
