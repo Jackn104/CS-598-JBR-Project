@@ -14,10 +14,13 @@ requiredArgs.add_argument("-g", "--graph", dest="graph",
                     help="set type of graph", required=True)
 requiredArgs.add_argument("-f", "--file", dest="file",
                     help="set file name", required=False)
+requiredArgs.add_argument("-c", "--class", dest="class",
+                    help="set main class", required=False)
 
 args = vars(parser.parse_args())
 dir = args['directory'].strip("/")
 graph = args['graph']
+cls = args['class'] if args['class'] else "N/A"
 formatted_directory = ("/"+dir).replace('\\', '/')+"/"
 
 try: 
@@ -61,10 +64,10 @@ def one_file_AST(formatted_directory, file, flag):
 
     os.system('dot -Tpng {} -o {}'.format(formatted_directory + "output/" + flag + dotFile, formatted_directory + "output/" + flag + pngFile))
 
-def run_analysis(directory, graph):
+def run_analysis(directory, graph, cls):
     if graph in ["CG", "ICFG"]:
         jar_path = f"SootScripts/out/artifacts/{graph}_jar/SootScripts.jar"
-        cmd = ['java', '-jar', jar_path, directory]
+        cmd = ['java', '-jar', jar_path, directory, cls]
         run(cmd)
         make_graph(directory, graph)
     else:
@@ -84,4 +87,4 @@ def run_analysis(directory, graph):
             file = args['file']
             one_file_AST(formatted_directory[1:], file, "")
             
-run_analysis(dir, graph)
+run_analysis(dir, graph, cls)
