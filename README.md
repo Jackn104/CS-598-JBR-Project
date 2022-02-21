@@ -11,7 +11,7 @@ Our project relies on these, so make sure to have updated versions of each.
 Our repository is structured as follows. At the top level is our main python script analysis.py which may be called from the command line in order to perform static analysis. There are then a series of subdirectories which are categorized either as analysis tools or repositories to analyze. 
 * ```SootScripts/``` houses our static analysis logic. 
 * ```GraphViz/``` houses the GraphViz logic, intermediate dot files, and output graphs. 
-* ```sootOutput/``` is created and populated where soot is run. 
+* ```sootOutput/``` is created and populated when soot is run. 
 * All other directories are repositories to analyze using analysis.py
 
 ## Overview
