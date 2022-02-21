@@ -7,6 +7,8 @@ Our project relies on these, so make sure to have updated versions of each.
 - CheckStyle
 - GraphViz 
 
+Running the script requires using a UNIX based commandline. Either a Linux terminal, MacOS, or WSL shell will suffice.
+
 ## Repository Structure
 Our repository is structured as follows. At the top level is our main python script analysis.py which may be called from the command line in order to perform static analysis. There are then a series of subdirectories which are categorized either as analysis tools or repositories to analyze. 
 * ```SootScripts/``` houses our static analysis logic. 
