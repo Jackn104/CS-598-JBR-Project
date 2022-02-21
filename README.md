@@ -184,7 +184,7 @@ digraph {
 	
 
 <details>
-  <summary>ExampleCode.png (Graph)</summary>
+  <summary>CG Graph</summary>
 
 
 ![This is an image](https://media.discordapp.net/attachments/942159728287572099/945031339252523088/testers-CG.png)
@@ -206,9 +206,8 @@ SootScripts/src/sootscripts/ICFGScript.java
 
 	
 Here is what the run in command line will look like:
-# TODO NEED MORE INFO FOR MAIN CLASS 
 ```
-Python analysis.py -d path -g ICFG -f ExampleCode.java -m
+Python analysis.py -d path -g ICFG -c testers.ExampleCode
 ```
 	
 <details>
@@ -406,7 +405,7 @@ digraph {
 
 	
 <details>
-  <summary>ExampleCode.png</summary>
+  <summary>ICFG Graph</summary>
 	
 ![This is an image](https://media.discordapp.net/attachments/942159728287572099/945031339445452840/testers-ICFG.png?width=412&height=676)
 </details>
@@ -832,8 +831,13 @@ digraph{
 </details>
 	
 <details>
-  <summary>check_to_graphViz.py</summary>
+  <summary>AST Graph</summary>
 	
 ![This is an image](https://raw.githubusercontent.com/Jackn104/CS-598-JBR-Project/main/SootScripts/out/artifacts/AST_Stuff/ExampleCodeAST.png)
 	
 </details>
+
+	
+## Conclusion
+	
+Our tool is complete and ready to use. The Call Graph and Abstract Syntax Tree functionalities are general purpose and work for any directories and files. The Interprocedural Control Flow Graph works only on repos and corresponding main classes with a main method. An example of a command-line command which works to analyze a real repository is ```python3 analysis.py -d java-design-patterns/flux/target/classes -c com.iluwatar.flux.app.App -g ICFG```. Examples for this analysis and other analyses on real repositories can be found in the ```GraphViz/GraphFilesPNG/``` directory.
