@@ -832,7 +832,7 @@ digraph{
 </details>
 	
 <details>
-  <summary>check_to_graphViz.py</summary>
+  <summary>ExampleCodeAST.png</summary>
 	
 ![This is an image](https://raw.githubusercontent.com/Jackn104/CS-598-JBR-Project/main/SootScripts/out/artifacts/AST_Stuff/ExampleCodeAST.png)
 	
