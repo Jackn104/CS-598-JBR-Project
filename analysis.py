@@ -59,7 +59,9 @@ def one_file_AST(formatted_directory, file, flag):
     os.system('dot -Tpng {} -o {}'.format(formatted_directory + "Graphviz/GraphFilesPNG/" + flag + dotFile, formatted_directory + "Graphviz/GraphFilesPNG/" + flag + pngFile))
 
     os.system('rm {}'.format(formatted_directory + "Graphviz/GraphFilesPNG/" + flag + outputFile))
-    os.system('rm {}'.format(formatted_directory + "Graphviz/GraphFilesPNG/" + flag + dotFile)) 
+    os.system('rm {}'.format(formatted_directory + "Graphviz/GraphFilesPNG/" + flag + dotFile))
+
+    os.system('cp {} {}'.format(formatted_directory + "Graphviz/GraphFilesPNG/" + flag + pngFile, 'Graphviz/DotFiles/' + flag + pngFile))
 
 def run_analysis(directory, graph, cls):
     if graph in ["CG", "ICFG"]:
