@@ -1,7 +1,10 @@
 from argparse import ArgumentParser
-from subprocess import run
 from pathlib import Path
+import pathlib
 import os
+import subprocess
+from subprocess import run
+import sys
 
 parser = ArgumentParser()
 requiredArgs = parser.add_argument_group('required named arguments')
@@ -11,44 +14,74 @@ requiredArgs.add_argument("-g", "--graph", dest="graph",
                     help="set type of graph", required=True)
 requiredArgs.add_argument("-f", "--file", dest="file",
                     help="set file name", required=False)
-requiredArgs.add_argument("-c", "--class", dest="class",
-                    help="set main class", required=False)
 
 args = vars(parser.parse_args())
-dir = args['directory']
+dir = args['directory'].strip("/")
 graph = args['graph']
-file = args['file']
-cls = args['class'] if args['class'] else "N/A"
+formatted_directory = ("/"+dir).replace('\\', '/')+"/"
 
 try: 
-    if not (Path(dir).is_dir()):
+    if not (os.access(str(pathlib.Path().resolve()) + formatted_directory, os.F_OK)):
         raise Exception("Path doesn't exist")
+
+    if args['file'] != None: 
+        extension = args['file'].split(".")[-1] 
+        if (extension not in ["class", "java"]):
+            raise Exception("File Type is wrong")
 
     if graph not in ["AST", "CG", "ICFG"]:
         raise Exception("Graph type is not in list of possible options")
 
 except Exception as error: 
     print("Error:\t" + str(error))
+    sys.exit()
 
-def run_analysis(directory, graph, cls):
-    if graph in ["CG", "ICFG"]:
-        jar_path = f"SootScripts/out/artifacts/{graph}_jar/SootScripts.jar"
-        cmd = ['java', '-jar', jar_path, directory, cls]
-        run(cmd)
-    elif graph == "AST":
-        os.system("py SootScripts/out/artifacts/AST_Stuff/pipe.py")
-        # jar_path = "SootScripts/out/artifacts/AST_Stuff/checkstyle-9.3-all.jar"
-        # cmd = "java -jar " +jar_path + " -t " + directory +"/ExampleCode.java"+">"+directory+"/AST.txt"
-        # os.system(cmd)
-        # print("done1")
-        # os.system("py SootScripts/out/artifacts/AST_Stuff/check_to_graphViz.py>SootScripts/out/artifacts/AST_Stuff/AST.txt")
+def compile_java(directory):
+    subprocess.check_call(['javac', directory])
 
+    
 def make_graph(directory, graph):
     graph_path = f'Graphviz/DotFiles/{graph}.txt'
-    dir_name = directory.split('/')[0]
-    output_file = f'Graphviz/GraphFilesPNG/{dir_name}-{graph}.png'
+    dir_name = dir.split('/')[0]
+    output_file = f'Graphviz/GraphFilesPNG/-{graph}.png'
     cmd = ['dot', '-Tpng', graph_path, '-o', output_file]
     run(cmd)
 
-run_analysis(dir, graph, cls)
-make_graph(dir, graph)
+def one_file_AST(formatted_directory, file, flag):
+    outputFile = file.replace(".", "_") + "_AST_GRAPH.txt"
+    dotFile = file.replace(".", "_") + "_DOT.txt"
+    pngFile = file.replace(".", "_") + "_AST.png"
+    
+    os.system("java -jar SootScripts/out/artifacts/AST_Stuff/checkstyle-9.3-all.jar -t {}>{}".format(formatted_directory + file, outputFile))
+    os.system("mv " + outputFile + " " + formatted_directory + "output/" + flag)
+       
+    print("before graphviz")
+    os.system("python3 SootScripts/out/artifacts/AST_Stuff/check_to_graphViz.py -d {} -f {} > {}".format(formatted_directory + "output/" + flag, outputFile, formatted_directory + "output/" + flag + dotFile))
+    print("after graphviz")
+
+    os.system('dot -Tpng {} -o {}'.format(formatted_directory + "output/" + flag + dotFile, formatted_directory + "output/" + flag + pngFile))
+
+def run_analysis(directory, graph):
+    if graph in ["CG", "ICFG"]:
+        jar_path = f"SootScripts/out/artifacts/{graph}_jar/SootScripts.jar"
+        cmd = ['java', '-jar', jar_path, directory]
+        run(cmd)
+        make_graph(directory, graph)
+    else:
+        if (os.path.isdir(formatted_directory[1:] + "output/")):
+            os.system("rm -rf " + formatted_directory[1:] + "output/")
+            os.system("mkdir " + formatted_directory[1:] + "output/")
+        else: 
+            os.system("mkdir " + formatted_directory[1:] + "output/")
+
+        if (args['file'] == None):
+            for file in os.listdir(formatted_directory[1:]):
+                if file.split(".")[-1] == "java":
+                    os.system("mkdir " + formatted_directory[1:] + "output/" + file[:-5] + "AST")
+                    one_file_AST(formatted_directory[1:], file, file[:-5]+"AST/")
+
+        else:
+            file = args['file']
+            one_file_AST(formatted_directory[1:], file, "")
+            
+run_analysis(dir, graph)
