@@ -38,15 +38,11 @@ try:
 except Exception as error: 
     print("Error:\t" + str(error))
     sys.exit()
-
-def compile_java(directory):
-    subprocess.check_call(['javac', directory])
-
-    
+ 
 def make_graph(directory, graph):
     graph_path = f'Graphviz/DotFiles/{graph}.txt'
-    dir_name = dir.split('/')[0]
-    output_file = f'Graphviz/GraphFilesPNG/-{graph}.png'
+    dir_name = directory.split('/')[0]
+    output_file = f'Graphviz/GraphFilesPNG/{dir_name}-{graph}.png'
     cmd = ['dot', '-Tpng', graph_path, '-o', output_file]
     run(cmd)
 
