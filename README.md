@@ -6,7 +6,6 @@ Our project relies on these, so make sure to have updated versions of each.
 - Soot
 - CheckStyle
 - GraphViz 
-- Linux/Unix Based OS
 
 ## Repository Structure
 Our repository is structured as follows. At the top level is our main python script analysis.py which may be called from the command line in order to perform static analysis. There are then a series of subdirectories which are categorized either as analysis tools or repositories to analyze. 
@@ -192,7 +191,7 @@ digraph {
 </details>
 	
 	
-Note that this code will run on entire directories if the -f argument is omitted. Make sure the code has been compiled and class files are available to be run on, otherwise it will not run correctly. 
+Note that this code will run on entire directories such that the -d flag should point to the highest level folder of the corresponding package (e.g. ```src/``` or ```target/classes/```) and the -f  and -c arguments are disregarded. Make sure the code has been compiled and the .class files are available to be run on in the directory, otherwise it will run far too slowly. 
 
 <br>
 
@@ -411,7 +410,7 @@ digraph {
 </details>
 
 
-Note that this code will run on entire directories if the -f argument is omitted. Make sure the main class and method are located as well.
+Note that this code will run on the entire directory that the -d argument points to. You also must make sure that the main class -c argument is set to the class you want to use as an entry point to the analysis, and that class must contain a main method as well.
 	
 	
 ### Abstract Syntax Trees
