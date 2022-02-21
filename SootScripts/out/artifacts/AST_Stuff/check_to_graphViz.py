@@ -1,11 +1,19 @@
+from argparse import ArgumentParser
+from pathlib import Path
+import os
+import subprocess
+from subprocess import run
 
-#The only thing that needs to change is the ExampleCode portion of the file opening 
-         
+parser = ArgumentParser()
+requiredArgs = parser.add_argument_group('required named arguments')
+requiredArgs.add_argument("-d", "--dir", dest="directory",
+                    help="the path to the directory to analyze", required=True)
+requiredArgs.add_argument("-f", "--file", dest="file",
+                    help="set file name", required=False)
+args = vars(parser.parse_args())
 
-f = open("SootScripts/out/artifacts/AST_Stuff/AST.txt")
+f = open(args["directory"] + args["file"])
 l = f.readlines()
-
-
 
 def clean_lines(txt):     
     return txt.replace(" -> ",":")
@@ -36,12 +44,9 @@ for k in range(6):
     for index in ind:
         l.pop(index-offset)
         offset+=1
-
-        
     
 all_text.append('\n}')
 
 for line in all_text:
     print(line, end ='')
-
 
